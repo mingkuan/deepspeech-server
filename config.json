@@ -1,0 +1,27 @@
+{
+  "deepspeech": {
+    "model" :"../DeepSpeech/models/output_graph.pb",
+    "alphabet": "../DeepSpeech/models/alphabet.txt",
+    "lm": "../DeepSpeech/models/lm.binary",
+    "trie": "../DeepSpeech/models/trie",
+    "features": {
+      "n_features": 26,
+      "n_context": 9,
+      "beam_width": 500, 
+      "lm_weight": 1.5,
+      "vwc_weight": 2.25 
+    }
+  },
+  "server": {
+    "http": {
+      "host": "0.0.0.0",
+      "port": 8080,
+      "request_max_size": 1048576
+    }
+  },
+  "log": {
+    "level": [
+      { "logger": "deepspeech_server", "level": "DEBUG"}
+    ]
+  }
+}
